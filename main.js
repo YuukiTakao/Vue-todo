@@ -25,7 +25,8 @@ const app = new Vue({
       { value: 0, label: '作業中' },
       { value: 1, label: '完了' },
     ],
-    current: -1
+    current: -1,
+    test: 10
   },
   created() {
     this.todos = todoStorage.fetch()
@@ -61,7 +62,13 @@ const app = new Vue({
       return this.options.reduce(function (a, b) {
         return Object.assign(a, { [b.value]: b.label })
       })
-    }
+    },
+    getTest: function () {
+      return this.test
+    },
+    getTest2: function () {
+      return this.getTest * 2
+    },
   },
   watch: {
     todos: {

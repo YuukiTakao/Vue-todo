@@ -16,7 +16,6 @@
       <input type="radio" v-model="current" v-bind:value="label.value">{{ label.label }}
     </label>
     （{{ computedTodos.length }} 件を表示）
-
     <table>
       <thead v-pre>
         <tr>
@@ -50,6 +49,11 @@
       コメント <input type="text" ref="comment">
       <button type="submit">追加</button>
     </form>
+    <div>
+      <h3>-------test area-------</h3>
+      <p>現在testの値は {{ getTest }} です</p>
+      <p>現在test2の値は {{ getTest2 }} です</p>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
